@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="320.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="77.0" layoutY="44.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="25.0">
+               <children>
+                  <Label prefWidth="90.0" text="Имя задания">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="taskName" promptText="Введите имя задания" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <CheckBox fx:id="filterCheckBox" mnemonicParsing="false" prefHeight="25.0" text="Фильтр" />
+            <VBox fx:id="filterVBox">
+               <children>
+                  <HBox prefHeight="25.0">
+                     <children>
+                        <ChoiceBox fx:id="filterChoiceBox" prefWidth="90.0">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="filterElementName" promptText="Введите имя элемента" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox fx:id="defaultVBox">
+               <children>
+                  <Label prefHeight="40.0" text="Если не используется фильтр, то необходимо указать погрешность в количестве символов на странице." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label prefHeight="40.0" text="Если наблюдаются ложные срабатывания, то постепенно увеличивайте значение." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label fx:id="errorInt" alignment="CENTER" contentDisplay="CENTER" text="Label" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <HBox prefHeight="35.0">
+                     <children>
+                        <Slider fx:id="errorSlider" max="50.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="25.0">
+               <children>
+                  <ChoiceBox fx:id="refreshTime" prefWidth="90.0" />
+                  <Label text="Время автообновления">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <ButtonBar prefHeight="25.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#saveTask" text="OK" wrapText="true" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelTask" text="Cancel" wrapText="true" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

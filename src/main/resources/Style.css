@@ -1,0 +1,110 @@
+.root {
+    -fx-background-color: #f3f3f3;
+    -fx-focus-color: transparent;
+}
+
+#radius {
+    -fx-border-color: #d4d4d4;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.slider .track{
+    -fx-background-color: #d4d4d4;
+    -fx-pref-height: 2;
+}
+.slider .thumb {
+    -fx-pref-height: 15;
+    -fx-pref-width: 15;
+    -fx-background-color: #fff;
+    -fx-border-color: #d4d4d4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+}
+
+.label {
+-fx-text-fill: #6a6a6a;
+}
+
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #d4d4d4;
+    -fx-border-width: 2px;
+}
+
+.text-input {
+    -fx-text-fill: #6a6a6a;
+}
+
+.check-box {
+    -fx-text-fill: #6a6a6a;
+}
+
+.check-box .box{
+    -fx-border-width: 2px;
+    -fx-border-color: #d4d4d4;
+    -fx-background-color: white;
+}
+
+.choice-box {
+    -fx-background-color: #fff;
+    -fx-border-color: #d4d4d4;
+    -fx-border-width: 2px;
+}
+
+.list-view {
+    -fx-background-color: #fff;
+    -fx-border-color:  #d4d4d4;
+    -fx-border-width: 2px;
+}
+
+.list-cell {
+    -fx-padding: 0px ;
+    -fx-background-color: transparent, -fx-background ;
+    -fx-background-insets: 0px, 2px ;
+    -fx-border-color: #d4d4d4;
+    -fx-border-width: 0 0 2 0;
+}
+
+.list-cell:empty {
+    -fx-padding: 0px ;
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 ;
+    -fx-border-width: 0;
+}
+
+.list-cell:selected {
+    -fx-background-color: transparent;
+}
+
+.button {
+    -fx-text-fill: #6a6a6a;
+    -fx-background-color: #fff;
+    -fx-border-color:  #d4d4d4;
+    -fx-border-width: 2px;
+}
+
+.button:hover {
+    -fx-background-color: #e1e1e1;
+}
+
+.button:pressed {
+    -fx-background-color: #d4d4d4;
+    -fx-text-fill: #6a6a6a;
+}
+
+#button_default {
+    -fx-text-fill: #6a6a6a;
+    -fx-background-color: #fff;
+    -fx-border-width: 0px;
+}
+
+#button_changed {
+    -fx-text-fill: red;
+    -fx-background-color: #fff;
+    -fx-border-width: 0px;
+}
+
+#button_without_border {
+    -fx-border-width: 0px;
+}
