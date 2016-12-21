@@ -23,7 +23,7 @@
          <children>
             <HBox prefHeight="40.0">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@logo.png" />
                      </image>
