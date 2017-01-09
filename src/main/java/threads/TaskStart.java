@@ -43,6 +43,7 @@ public class TaskStart extends Thread {
                     if (!byClass.toString().equals(oldDocumentString) && !oldDocumentString.equals(""))
                         isChanged();
                     oldDocumentString = byClass.toString();
+                    System.out.println(oldDocumentString);
                 }
                 if (filterElement.equals("Id")) {
                     Element byId = doc.getElementById(task.getFilterElementName());
@@ -50,6 +51,7 @@ public class TaskStart extends Thread {
                     if (!byId.toString().equals(oldDocumentString) && !oldDocumentString.equals(""))
                         isChanged();
                     oldDocumentString = byId.toString();
+                    System.out.println(oldDocumentString);
                 }
             } else {
                 Element byBody = doc.body();
@@ -57,6 +59,7 @@ public class TaskStart extends Thread {
                 if (Math.abs(i - oldDocumentInt) > task.getError() && oldDocumentInt != 0)
                     isChanged();
                 oldDocumentInt = i;
+                System.out.println(oldDocumentInt);
             }
 
             pause();
@@ -66,7 +69,7 @@ public class TaskStart extends Thread {
     private Document getDocument() {
         Document doc = null;
         try {
-            doc = Jsoup.connect(task.getTaskURL()).get();
+            doc = Jsoup.connect(task.getTaskURL()).userAgent("Mozilla").get();
         } catch (IOException e) {
             e.printStackTrace();
         }
